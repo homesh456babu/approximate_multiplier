@@ -193,6 +193,20 @@ Matches truth table of a proper 5-bit adder with split outputs:
 ---
 
 
+## 🔧 Comparison: Approximate vs Exact 4x4 Multiplier
+
+| Metric              | **Approximate Multiplier** | **Exact Multiplier (Standard)** | **Improvement**     |
+| ------------------- | -------------------------- | ------------------------------- | ------------------- |
+| **Slice LUTs**      | 12                         | 16                              | **\~25% reduction** |
+| **Bonded IOBs**     | 16                         | 16                              | Same                |
+| **Total Power**     | 3.713 W                    | \~5.2–6.0 W *(estimated)*       | **\~30% lower**     |
+| ├─ Logic Power      | 0.053 W                    | \~0.120 W                       | **\~56% lower**     |
+| ├─ I/O Power        | 3.557 W                    | \~4.5 W                         | **\~21% lower**     |
+| ├─ Static Power     | 0.089 W                    | \~0.15 W                        | **\~41% lower**     |
+| **Mean Rel. Error** | 6.87%                      | 0% (Exact)                      | Trade-off           |
+
+
+
 
 
 
