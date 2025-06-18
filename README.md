@@ -58,7 +58,7 @@ This project implements a 4-bit by 4-bit multiplier using a mix of **exact** and
 
 **Logic**:  
 - `sum = A ^ B ^ Cin`  
-- `carry = AB + BCin + ACin`
+- `carry = A & B + B & Cin + A & Cin`
 
 | A | B | Cin | Sum | Carry |
 |---|---|-----|-----|--------|
@@ -101,7 +101,7 @@ This project implements a 4-bit by 4-bit multiplier using a mix of **exact** and
 
 **Logic**:  
 - `sum = (A ^ B) | (C ^ D)`  
-- `carry = A·(B+C+D) + B·(C+D) + C·D`
+- `carry = A & (B+C+D) + B & (C+D) + C& D`
 
 | A | B | C | D | Sum | Carry | Notes |
 |---|---|---|---|-----|--------|--------|
